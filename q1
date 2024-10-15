@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps of India and World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        img {
+            width: 300px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .state-info {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Maps of India and the World</h1>
+<h2>Click on a map:</h2>
+<a href="#" onclick="showIndiaMap()">
+    <img src="india-map.jpg" alt="Map of India">
+</a>
+<a href="#" onclick="showWorldMap()">
+    <img src="world-map.jpg" alt="World Map">
+</a>
+<div id="india-map" class="state-info">
+    <h2>Map of India</h2>
+    <ul>
+        <li><a href="#" onclick="showStateInfo('Maharashtra')">Maharashtra</a></li>
+        <li><a href="#" onclick="showStateInfo('Karnataka')">Karnataka</a></li>
+        <li><a href="#" onclick="showStateInfo('Tamil Nadu')">Tamil Nadu</a></li>
+        <li><a href="#" onclick="showStateInfo('West Bengal')">West Bengal</a></li>
+        <li><a href="#" onclick="showStateInfo('Uttar Pradesh')">Uttar Pradesh</a></li>
+    </ul>
+</div>
+<div id="world-map" class="state-info">
+    <h2>Map of World</h2>
+    <ul>
+        <li><a href="#" onclick="openCountryList()">List of Countries</a></li>
+    </ul>
+</div>
+ -<script>
+function showIndiaMap() {
+    document.getElementById('india-map').style.display = 'block';
+    document.getElementById('world-map').style.display = 'none';
+}
+function showWorldMap() {
+    document.getElementById('world-map').style.display = 'block';
+    document.getElementById('india-map').style.display = 'none';
+}
+function showStateInfo(state) {
+    let info = {
+        'Maharashtra': 'Maharashtra is known for its rich cultural heritage and financial capital, Mumbai.',
+        'Karnataka': 'Karnataka is famous for its technology industry and historical sites like Hampi.',
+        'Tamil Nadu': 'Tamil Nadu is renowned for its classical dance forms and temples.',
+        'West Bengal': 'West Bengal is known for its art, culture, and the Sundarbans mangrove forest.',
+        'Uttar Pradesh': 'Uttar Pradesh is home to the Taj Mahal and is a significant pilgrimage site.
+    };
+alert(info[state] || 'Information not available.');
+}
+function openCountryList() {
+    const countries = [
+        "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Argentina", 
+        "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", 
+        "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", 
+        "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", 
+    ];
+    const countryList = countries.join(', ');
+    const newWindow = window.open("", "Country List", "width=600,height=400");
+    newWindow.document.write("<h2>List of Countries</h2>");
+    newWindow.document.write("<p>" + countryList + "</p>");
+    newWindow.document.close();
+}
+</script>
+</body>
+</html>
