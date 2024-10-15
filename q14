@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Web Page with Table and Paragraphs</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <style>
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+        
+        .highlight {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sample Web Page</h1>
+
+    <p>This is the first paragraph of text. It provides some introduction to the content on this page.</p>
+    <p class="highlight">This is the second paragraph, which is highlighted to draw attention.</p>
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Item 1</td>
+            <td>Description of Item 1</td>
+            <td>$10</td>
+        </tr>
+        <tr>
+            <td>Item 2</td>
+            <td>Description of Item 2</td>
+            <td>$15</td>
+        </tr>
+        <tr>
+            <td>Item 3</td>
+            <td>Description of Item 3</td>
+            <td>$20</td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+Step 2: Create the External CSS File (styles.css)
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px;
+    text-align: left;
+}
+td {
+    border: 1px solid #ddd; 
+    padding: 8px;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+tr:hover {
+    background-color: #ddd; 
+}
