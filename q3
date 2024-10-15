@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Two Vertical Frames Example</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        .content {
+            width: 75%;
+            padding: 10px;
+        }
+        a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #333;
+        }
+        a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Links</h3>
+        <a href="#" onclick="showList('bulleted')">Bulleted List</a>
+        <a href="#" onclick="showList('numbered')">Numbered List</a>
+        <a href="#" onclick="showList('definition')">Definition List</a>
+    </div>
+    <div class="content" id="content">
+        <h3>Select a list type</h3>
+        <p>Please click on a link to see an example.</p>
+    </div>
+
+    <script>
+        function showList(type) {
+            let content = document.getElementById('content');
+            switch (type) {
+                case 'bulleted':
+                    content.innerHTML = `
+                        <h3>Bulleted List Example</h3>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    break;
+                case 'numbered':
+                    content.innerHTML = `
+                        <h3>Numbered List Example</h3>
+                        <ol>
+                            <li>First Item</li>
+                            <li>Second Item</li>
+                            <li>Third Item</li>
+                        </ol>
+                    break;
+                case 'definition':
+                    content.innerHTML = `
+                        <h3>Definition List Example</h3>
+                        <dl>
+                            <dt>HTML</dt>
+                            <dd>HyperText Markup Language</dd>
+                            <dt>CSS</dt>
+                            <dd>Cascading Style Sheets</dd>
+                            <dt>JavaScript</dt>
+                            <dd>A programming language for the web</dd>
+                        </dl>
+                    break;
+                default:
+                    content.innerHTML = `<h3>Select a list type</h3><p>Please click on a link to see an example.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
