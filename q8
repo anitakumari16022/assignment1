@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>March 2008 Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin: 20px;
+            text-align: center;
+        }
+        .day {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+        .sunday {
+            color: red;
+        }
+        .holiday {
+            color: blue;
+        }
+        .regular {
+            color: green;
+        }
+        .header {
+            grid-column: span 7;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .day-name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calendar">
+        <div class="header">March 2008</div>
+        <div class="day-name">Sun</div>
+        <div class="day-name">Mon</div>
+        <div class="day-name">Tue</div>
+        <div class="day-name">Wed</div>
+        <div class="day-name">Thu</div>
+        <div class="day-name">Fri</div>
+        <div class="day-name">Sat</div>
+        <div class="day"></div> <!-- Feb 29 -->
+        <div class="day"></div> <!-- Feb 30 -->
+        <div class="day"></div> <!-- Feb 31 -->
+        <div class="day sunday">1</div>
+        <div class="day regular">2</div> 
+        <div class="day regular">3</div>
+        <div class="day regular">4</div>
+        <div class="day regular">5</div>
+        <div class="day regular">6</div>
+        <div class="day regular">7</div>
+
+        <div class="day sunday">8</div>
+        <div class="day regular">9</div>
+        <div class="day regular">10</div>
+        <div class="day regular">11</div>
+        <div class="day regular">12</div>
+        <div class="day holiday">13</div>
+        <div class="day regular">14</div>
+
+        <div class="day sunday">15</div>
+        <div class="day regular">16</div>
+        <div class="day regular">17</div>
+        <div class="day regular">18</div>
+        <div class="day holiday">19</div> 
+        <div class="day regular">20</div>
+        <div class="day regular">21</div>
+        <div class="day sunday">22</div>
+        <div class="day regular">23</div>
+        <div class="day regular">24</div>
+        <div class="day regular">25</div>
+        <div class="day regular">26</div>
+        <div class="day holiday">27</div> 
+        <div class="day regular">28</div>
+        <div class="day sunday">29</div>
+        <div class="day regular">30</div>
+        <div class="day regular">31</div>
+    </div>
+</body>
+</html>
+
